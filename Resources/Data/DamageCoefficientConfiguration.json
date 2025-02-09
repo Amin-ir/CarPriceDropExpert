@@ -1,0 +1,146 @@
+{
+  "roof": {
+    "Persian": "سقف",
+    "Level_1": 3,
+    "Level_2": 5,
+    "Level_3": 7
+  },
+  "right_frame": {
+    "Persian": "کلاف راست",
+    "Level_1": 2,
+    "Level_2": 3,
+    "Level_3": 4
+  },
+  "left_frame": {
+    "Persian": "کلاف چپ",
+    "Level_1": 2,
+    "Level_2": 3,
+    "Level_3": 4
+  },
+  "right_pillar": {
+    "Persian": "ستون راست",
+    "Level_1": 2,
+    "Level_2": 3,
+    "Level_3": 4
+  },
+  "left_pillar": {
+    "Persian": "ستون چپ",
+    "Level_1": 2,
+    "Level_2": 3,
+    "Level_3": 4
+  },
+  "hood": {
+    "Persian": "درب موتور",
+    "Level_1": 2,
+    "Level_2": 3,
+    "Level_3": 4
+  },
+  "front_panel": {
+    "Persian": "سینی جلو",
+    "Level_1": 1,
+    "Level_2": 2,
+    "Level_3": 3
+  },
+  "front_chassis": {
+    "Persian": "شاسی جلو",
+    "Level_1": 3,
+    "Level_2": 5,
+    "Level_3": 7
+  },
+  "right_front_fender": {
+    "Persian": "گلگیر جلو راست",
+    "Level_1": 1,
+    "Level_2": 2,
+    "Level_3": 3
+  },
+  "left_front_fender": {
+    "Persian": "گلگیر جلو چپ",
+    "Level_1": 1,
+    "Level_2": 2,
+    "Level_3": 3
+  },
+  "right_front_door": {
+    "Persian": "درب جلو راست",
+    "Level_1": 1,
+    "Level_2": 2,
+    "Level_3": 3
+  },
+  "left_front_door": {
+    "Persian": "درب جلو چپ",
+    "Level_1": 1,
+    "Level_2": 2,
+    "Level_3": 3
+  },
+  "right_rear_door": {
+    "Persian": "درب عقب راست",
+    "Level_1": 1,
+    "Level_2": 2,
+    "Level_3": 3
+  },
+  "left_rear_door": {
+    "Persian": "درب عقب چپ",
+    "Level_1": 1,
+    "Level_2": 2,
+    "Level_3": 3
+  },
+  "right_rocker_panel": {
+    "Persian": "رکاب راست",
+    "Level_1": 1,
+    "Level_2": 2,
+    "Level_3": 3
+  },
+  "left_rocker_panel": {
+    "Persian": "رکاب چپ",
+    "Level_1": 1,
+    "Level_2": 2,
+    "Level_3": 3
+  },
+  "right_rear_fender": {
+    "Persian": "گلگیر عقب راست",
+    "Level_1": 2,
+    "Level_2": 3,
+    "Level_3": 5
+  },
+  "left_rear_fender": {
+    "Persian": "گلگیر عقب چپ",
+    "Level_1": 2,
+    "Level_2": 3,
+    "Level_3": 5
+  },
+  "trunk_door": {
+    "Persian": "درب صندوق",
+    "Level_1": 1,
+    "Level_2": 3,
+    "Level_3": 5
+  },
+  "rear_panel": {
+    "Persian": "سینی عقب",
+    "Level_1": 1,
+    "Level_2": 2,
+    "Level_3": 3
+  },
+  "trunk_floor_panel": {
+    "Persian": "سینی کف صندوق عقب",
+    "Level_1": 2,
+    "Level_2": 4,
+    "Level_3": 5
+  },
+  "rear_chassis": {
+    "Persian": "شاسی عقب",
+    "Level_1": 2,
+    "Level_2": 4,
+    "Level_3": 6
+  },
+  "floor": {
+    "Persian": "کف اتاق",
+    "Level_1": 4,
+    "Level_2": 6,
+    "Level_3": 8
+  },
+  "cylinder_block": {
+    "Persian": "بلوکه سیلندر",
+    "Level_1": 0,
+    "Level_2": 0,
+    "Level_3": 3
+  }
+}
