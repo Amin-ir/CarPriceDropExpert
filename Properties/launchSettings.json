@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "oft-winform": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false
+    }
+  }
+}

@@ -107,7 +107,7 @@
             hood_2 = new RadioButton();
             hood_3 = new RadioButton();
             hood_4 = new RadioButton();
-            font_panelPanel = new Panel();
+            front_panelPanel = new Panel();
             front_panel_1 = new RadioButton();
             front_panel_2 = new RadioButton();
             front_panel_3 = new RadioButton();
@@ -195,7 +195,7 @@
             room_changePanel = new Panel();
             room_change_4 = new RadioButton();
             room_change_1 = new RadioButton();
-            rooflPanel = new Panel();
+            roofPanel = new Panel();
             roof_1 = new RadioButton();
             roof_2 = new RadioButton();
             roof_3 = new RadioButton();
@@ -230,7 +230,7 @@
             right_pillarPanel.SuspendLayout();
             left_pillarPanel.SuspendLayout();
             hoodPanel.SuspendLayout();
-            font_panelPanel.SuspendLayout();
+            front_panelPanel.SuspendLayout();
             front_chassisPanel.SuspendLayout();
             right_front_fenderPanel.SuspendLayout();
             left_front_fenderPanel.SuspendLayout();
@@ -248,7 +248,7 @@
             rear_chassisPanel.SuspendLayout();
             floorPanel.SuspendLayout();
             room_changePanel.SuspendLayout();
-            rooflPanel.SuspendLayout();
+            roofPanel.SuspendLayout();
             cylinder_blockPanel.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
             SuspendLayout();
@@ -650,7 +650,7 @@
             containerPanel.Controls.Add(right_pillarPanel, 0, 3);
             containerPanel.Controls.Add(left_pillarPanel, 0, 4);
             containerPanel.Controls.Add(hoodPanel, 0, 5);
-            containerPanel.Controls.Add(font_panelPanel, 0, 6);
+            containerPanel.Controls.Add(front_panelPanel, 0, 6);
             containerPanel.Controls.Add(front_chassisPanel, 0, 7);
             containerPanel.Controls.Add(right_front_fenderPanel, 0, 8);
             containerPanel.Controls.Add(left_front_fenderPanel, 0, 9);
@@ -668,7 +668,7 @@
             containerPanel.Controls.Add(rear_chassisPanel, 0, 21);
             containerPanel.Controls.Add(floorPanel, 0, 22);
             containerPanel.Controls.Add(room_changePanel, 0, 24);
-            containerPanel.Controls.Add(rooflPanel, 0, 0);
+            containerPanel.Controls.Add(roofPanel, 0, 0);
             containerPanel.Controls.Add(cylinder_blockPanel, 0, 23);
             containerPanel.Controls.Add(label16, 1, 0);
             containerPanel.Location = new Point(24, 198);
@@ -1221,16 +1221,16 @@
             hood_4.TabStop = true;
             hood_4.UseVisualStyleBackColor = true;
             // 
-            // font_panelPanel
+            // front_panelPanel
             // 
-            font_panelPanel.Controls.Add(front_panel_1);
-            font_panelPanel.Controls.Add(front_panel_2);
-            font_panelPanel.Controls.Add(front_panel_3);
-            font_panelPanel.Controls.Add(front_panel_4);
-            font_panelPanel.Location = new Point(4, 124);
-            font_panelPanel.Name = "font_panelPanel";
-            font_panelPanel.Size = new Size(726, 13);
-            font_panelPanel.TabIndex = 4;
+            front_panelPanel.Controls.Add(front_panel_1);
+            front_panelPanel.Controls.Add(front_panel_2);
+            front_panelPanel.Controls.Add(front_panel_3);
+            front_panelPanel.Controls.Add(front_panel_4);
+            front_panelPanel.Location = new Point(4, 124);
+            front_panelPanel.Name = "front_panelPanel";
+            front_panelPanel.Size = new Size(726, 13);
+            front_panelPanel.TabIndex = 4;
             // 
             // front_panel_1
             // 
@@ -2122,16 +2122,16 @@
             room_change_1.Text = "خیر";
             room_change_1.UseVisualStyleBackColor = true;
             // 
-            // rooflPanel
+            // roofPanel
             // 
-            rooflPanel.Controls.Add(roof_1);
-            rooflPanel.Controls.Add(roof_2);
-            rooflPanel.Controls.Add(roof_3);
-            rooflPanel.Controls.Add(roof_4);
-            rooflPanel.Location = new Point(4, 4);
-            rooflPanel.Name = "rooflPanel";
-            rooflPanel.Size = new Size(726, 13);
-            rooflPanel.TabIndex = 0;
+            roofPanel.Controls.Add(roof_1);
+            roofPanel.Controls.Add(roof_2);
+            roofPanel.Controls.Add(roof_3);
+            roofPanel.Controls.Add(roof_4);
+            roofPanel.Location = new Point(4, 4);
+            roofPanel.Name = "roofPanel";
+            roofPanel.Size = new Size(726, 13);
+            roofPanel.TabIndex = 0;
             // 
             // roof_1
             // 
@@ -2371,8 +2371,8 @@
             left_pillarPanel.PerformLayout();
             hoodPanel.ResumeLayout(false);
             hoodPanel.PerformLayout();
-            font_panelPanel.ResumeLayout(false);
-            font_panelPanel.PerformLayout();
+            front_panelPanel.ResumeLayout(false);
+            front_panelPanel.PerformLayout();
             front_chassisPanel.ResumeLayout(false);
             front_chassisPanel.PerformLayout();
             right_front_fenderPanel.ResumeLayout(false);
@@ -2407,8 +2407,8 @@
             floorPanel.PerformLayout();
             room_changePanel.ResumeLayout(false);
             room_changePanel.PerformLayout();
-            rooflPanel.ResumeLayout(false);
-            rooflPanel.PerformLayout();
+            roofPanel.ResumeLayout(false);
+            roofPanel.PerformLayout();
             cylinder_blockPanel.ResumeLayout(false);
             cylinder_blockPanel.PerformLayout();
             tableLayoutPanel6.ResumeLayout(false);
@@ -2510,7 +2510,7 @@
         private Panel room_changePanel;
         private RadioButton room_change_4;
         private RadioButton room_change_1;
-        private Panel rooflPanel;
+        private Panel roofPanel;
         private RadioButton roof_1;
         private RadioButton roof_2;
         private RadioButton roof_3;
@@ -2543,7 +2543,7 @@
         private RadioButton hood_2;
         private RadioButton hood_3;
         private RadioButton hood_4;
-        private Panel font_panelPanel;
+        private Panel front_panelPanel;
         private RadioButton front_panel_1;
         private RadioButton front_panel_2;
         private RadioButton front_panel_3;

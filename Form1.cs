@@ -1,17 +1,29 @@
 ﻿using oft_winform.DTO;
+using oft_winform.Services;
+using oft_winform.TemplateMethods;
 using oft_winform.Utilities;
 using System.Globalization;
-using System.Text.Json;
-using System.Text.RegularExpressions;
 
 namespace oft_winform
 {
     public partial class Form1 : Form
     {
         PersianCalendar persianCalendar = new PersianCalendar();
+        PDFGenerationTemplate pdfGenerationService => new TejaratPdfGenerationService();
         public Form1()
         {
             InitializeComponent();
+
+            //carType_box.Text = "سواری";
+            //chassisNumber_box.Text = "216A156GG";
+            //engineNumber_box.Text = "158/13-AD2";
+            //plate1_box.Value = 33;
+            //plate2_combo.SelectedIndex = 5;
+            //plate3_box.Value = 342;
+            //plate4_box.Value = 16;
+            //conventionalCarPrice_box.Value = 10_000_000_000;
+            //manufactureYear_box.Value = 1400;
+            //carPrice_box.Value = 8_000_000_000;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -32,7 +44,47 @@ namespace oft_winform
         {
             try
             {
-                Validate();
+                ValidateTextFields();
+
+                string outputPath = ".";
+                Application.EnableVisualStyles();
+                FolderBrowserDialog folderDialog = new FolderBrowserDialog
+                {
+                    Description = "محل ذخیره گزارش را انتخاب کنید",
+                    ShowNewFolderButton = true // Allows creating a new folder
+                };
+
+                if (folderDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string selectedPath = folderDialog.SelectedPath;
+                    outputPath = selectedPath;
+                }
+                else
+                    return;
+
+                outputPath += $"/report-{DateTime.Now.ToString("yyyyMMdd")}-{DateTime.Now.ToString("HHmmss")}.pdf";
+                
+                string plate1 = plate1_box.Value.ToString().ReverseUsingArray();
+                string plate2 = plate2_combo.SelectedItem.ToString();
+                string plate3 = plate3_box.Value.ToString().ReverseUsingArray();
+                string plate4 = plate4_box.Value.ToString().ReverseUsingArray() + " ایران";
+                string plate = "\u202E" + string.Join('-', plate4, plate3, plate2, plate1);
+
+                pdfGenerationService.GeneratePdf(new PdfGenerationRequest
+                {
+                    OutputPath = outputPath,
+                    SelectedDamages = GetSelectedRadioInformation(),
+                    CarPrice = (long)carPrice_box.Value,
+                    ConventionalCarPrice = (long)conventionalCarPrice_box.Value,
+                    CarType = carType_box.Text,
+                    ChassisNumber = chassisNumber_box.Text,
+                    EngineNumber = engineNumber_box.Text,
+                    PlateNumber = plate, 
+                    YearManufactured = (int)manufactureYear_box.Value,
+                    Date = date_lbl.Text
+                });
+
+                MessageBox.Show($"گزارش در آدرس زیر ایجاد شد:\n{outputPath}");
             }
             catch (ArgumentException ex)
             {
@@ -54,8 +106,6 @@ namespace oft_winform
             {
                 if (control is Panel panel)
                 {
-                    if (panel.Name == "roomChangePanel")
-                        ;
                     List<RadioButton> radios = GetChildControlsOfType<RadioButton>(panel);
 
                     RadioButton? selectedRadio = radios.FirstOrDefault(r => r.Checked);
@@ -112,7 +162,7 @@ namespace oft_winform
 
         private void CleanManufactureYear()
         {
-            manufactureYear_box.Value = 0;
+            manufactureYear_box.Value = 1300;
         }
 
         private void CleanConventionalPrice()
@@ -178,7 +228,6 @@ namespace oft_winform
         {
             try
             {
-                Validate();
                 Dictionary<string, DamageLevel> inputRadios = GetSelectedRadioInformation();
                 long carPrice = Convert.ToInt64(carPrice_box.Value);
                 long conventionalPrice = Convert.ToInt64(conventionalCarPrice_box.Value);
@@ -188,6 +237,10 @@ namespace oft_winform
 
                 priceDrop_lbl.Text = $"{priceDrop:n0}";
             }catch(ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch(ApplicationException ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -218,7 +271,7 @@ namespace oft_winform
             }
         }
 
-        private void Validate()
+        private void ValidateTextFields()
         {
             if (string.IsNullOrEmpty(carType_box.Text))
             {

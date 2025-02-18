@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table, table td{
+                border-style:solid;
+                border-width: 1px;
+                border-collapse: collapse;
+            }
+            * {
+                text-align: center;
+            }
+            #selectedRadios thead *{
+                color:white;
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 33%;"></td>
+                    <td style="width: 33%;">فرم کارشناسی افت قیمت خودرو</td>
+                    <td style="width: 33%;">[LOGO]</td>
+                </tr>
+            </table>
+            <br>
+            <div style="border-style:solid; border-width: 1px;">
+                <br>
+                <div class="isTable" style="border:none; display: flex; flex-direction: row; justify-content: right; text-align: center;">
+                    <table>
+                        <tr>
+                            <td>[DATE]</td>
+                            <td>:تاریخ کارشناسی</td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <table style="width: 100%;">
+                    <tr>
+                        <td>[PlateNumber]</td>
+                        <td>:پلاک</td>
+                        <td>[EngineNumber]</td>
+                        <td>:شماره موتور</td>
+                        <td>[ChassisNumber]</td>
+                        <td>:شماره شاسی</td>
+                        <td>[CarType]</td>
+                        <td>:نوع خودرو</td>
+                    </tr>
+                </table>
+                <br>
+                <div style="display: flex; flex-direction: row; justify-content: right;">
+                    <div>
+                        <table style="border-style: solid; border-collapse: collapse;">
+                            <tr><td>[ConventionalCarPrice]</td><td style="text-align: right;">:قیمت خودرو متعارف (ریال)</td></tr>
+                            <tr><td>[ManufactureYear]</td><td style="text-align: right;">: سال ساخت</td></tr>
+                            <tr><td>[CarPrice]</td><td style="text-align: right;">:قیمت خودرو (ریال)</td></tr>
+                            <tr><td>[CarPriceDrop]</td><td style="text-align: right;">:برآورد افت قیمت (ریال)</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <br>
+                <div style="display: flex; justify-content: center; flex-direction: row;">
+                    <div>
+                        <table style="width: 100%;" id="selectedRadios">
+                            <thead>
+                                <tr>
+                                    <td style="width: 20%;">خسارت شدید</td>
+                                    <td style="width: 20%;">خسارت متوسط</td>
+                                    <td style="width: 20%;">خسارت جزئی</td>
+                                    <td style="width: 20%;">فاقد خسارت</td>
+                                    <td style="width: 20%;">موارد آسیب دیده</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>[roof_Level4]</td>
+                                    <td>[roof_Level3]</td>
+                                    <td>[roof_Level2]</td>
+                                    <td>[roof_Level1]</td>
+                                    <td>سقف</td>
+                                </tr>
+                                <tr>
+                                    <td>[right_frame_Level4]</td>
+                                    <td>[right_frame_Level3]</td>
+                                    <td>[right_frame_Level2]</td>
+                                    <td>[right_frame_Level1]</td>
+                                    <td>کالاف راست</td>
+                                </tr>
+                                <tr>
+                                    <td>[left_frame_Level4]</td>
+                                    <td>[left_frame_Level3]</td>
+                                    <td>[left_frame_Level2]</td>
+                                    <td>[left_frame_Level1]</td>
+                                    <td>کالاف چپ</td>
+                                </tr>
+                                <tr>
+                                    <td>[right_pillar_Level4]</td>
+                                    <td>[right_pillar_Level3]</td>
+                                    <td>[right_pillar_Level2]</td>
+                                    <td>[right_pillar_Level1]</td>
+                                    <td>ستون راست</td>
+                                </tr>
+                                <tr>
+                                    <td>[left_pillar_Level4]</td>
+                                    <td>[left_pillar_Level3]</td>
+                                    <td>[left_pillar_Level2]</td>
+                                    <td>[left_pillar_Level1]</td>
+                                    <td>ستون چپ</td>
+                                </tr>
+                                <tr>
+                                    <td>[hood_Level4]</td>
+                                    <td>[hood_Level3]</td>
+                                    <td>[hood_Level2]</td>
+                                    <td>[hood_Level1]</td>
+                                    <td>درب موتور</td>
+                                </tr>
+                                <tr>
+                                    <td>[front_panel_Level4]</td>
+                                    <td>[front_panel_Level3]</td>
+                                    <td>[front_panel_Level2]</td>
+                                    <td>[front_panel_Level1]</td>
+                                    <td>سینی جلو</td>
+                                </tr>
+                                <tr>
+                                    <td>[front_chassis_Level4]</td>
+                                    <td>[front_chassis_Level3]</td>
+                                    <td>[front_chassis_Level2]</td>
+                                    <td>[front_chassis_Level1]</td>
+                                    <td>شاسی جلو</td>
+                                </tr>
+                                <tr>
+                                    <td>[right_front_fender_Level4]</td>
+                                    <td>[right_front_fender_Level3]</td>
+                                    <td>[right_front_fender_Level2]</td>
+                                    <td>[right_front_fender_Level1]</td>
+                                    <td>گلگیر جلو راست</td>
+                                </tr>
+                                <tr>
+                                    <td>[left_front_fender_Level4]</td>
+                                    <td>[left_front_fender_Level3]</td>
+                                    <td>[left_front_fender_Level2]</td>
+                                    <td>[left_front_fender_Level1]</td>
+                                    <td>گلگیر جلو چپ</td>
+                                </tr>
+                                <tr>
+                                    <td>[right_front_door_Level4]</td>
+                                    <td>[right_front_door_Level3]</td>
+                                    <td>[right_front_door_Level2]</td>
+                                    <td>[right_front_door_Level1]</td>
+                                    <td>درب جلو راست</td>
+                                </tr>
+                                <tr>
+                                    <td>[left_front_door_Level4]</td>
+                                    <td>[left_front_door_Level3]</td>
+                                    <td>[left_front_door_Level2]</td>
+                                    <td>[left_front_door_Level1]</td>
+                                    <td>درب جلو چپ</td>
+                                </tr>
+                                <tr>
+                                    <td>[right_rear_door_Level4]</td>
+                                    <td>[right_rear_door_Level3]</td>
+                                    <td>[right_rear_door_Level2]</td>
+                                    <td>[right_rear_door_Level1]</td>
+                                    <td>درب عقب راست</td>
+                                </tr>
+                                <tr>
+                                    <td>[left_rear_door_Level4]</td>
+                                    <td>[left_rear_door_Level3]</td>
+                                    <td>[left_rear_door_Level2]</td>
+                                    <td>[left_rear_door_Level1]</td>
+                                    <td>درب عقب چپ</td>
+                                </tr>
+                                <tr>
+                                    <td>[right_rocker_panel_Level4]</td>
+                                    <td>[right_rocker_panel_Level3]</td>
+                                    <td>[right_rocker_panel_Level2]</td>
+                                    <td>[right_rocker_panel_Level1]</td>
+                                    <td>رکاب راست</td>
+                                </tr>
+                                <tr>
+                                    <td>[left_rocker_panel_Level4]</td>
+                                    <td>[left_rocker_panel_Level3]</td>
+                                    <td>[left_rocker_panel_Level2]</td>
+                                    <td>[left_rocker_panel_Level1]</td>
+                                    <td>رکاب چپ</td>
+                                </tr>
+                                <tr>
+                                    <td>[right_rear_fender_Level4]</td>
+                                    <td>[right_rear_fender_Level3]</td>
+                                    <td>[right_rear_fender_Level2]</td>
+                                    <td>[right_rear_fender_Level1]</td>
+                                    <td>گلگیر عقب راست</td>
+                                </tr>
+                                <tr>
+                                    <td>[left_rear_fender_Level4]</td>
+                                    <td>[left_rear_fender_Level3]</td>
+                                    <td>[left_rear_fender_Level2]</td>
+                                    <td>[left_rear_fender_Level1]</td>
+                                    <td>گلگیر عقب چپ</td>
+                                </tr>
+                                <tr>
+                                    <td>[trunk_door_Level4]</td>
+                                    <td>[trunk_door_Level3]</td>
+                                    <td>[trunk_door_Level2]</td>
+                                    <td>[trunk_door_Level1]</td>
+                                    <td>درب صندوق</td>
+                                </tr>
+                                <tr>
+                                    <td>[rear_panel_Level4]</td>
+                                    <td>[rear_panel_Level3]</td>
+                                    <td>[rear_panel_Level2]</td>
+                                    <td>[rear_panel_Level1]</td>
+                                    <td>سینی عقب</td>
+                                </tr>
+                                <tr>
+                                    <td>[trunk_floor_panel_Level4]</td>
+                                    <td>[trunk_floor_panel_Level3]</td>
+                                    <td>[trunk_floor_panel_Level2]</td>
+                                    <td>[trunk_floor_panel_Level1]</td>
+                                    <td>سینی کف صندوق</td>
+                                </tr>
+                                <tr>
+                                    <td>[rear_chassis_Level4]</td>
+                                    <td>[rear_chassis_Level3]</td>
+                                    <td>[rear_chassis_Level2]</td>
+                                    <td>[rear_chassis_Level1]</td>
+                                    <td>شاسی عقب</td>
+                                </tr>
+                                <tr>
+                                    <td>[floor_Level4]</td>
+                                    <td>[floor_Level3]</td>
+                                    <td>[floor_Level2]</td>
+                                    <td>[floor_Level1]</td>
+                                    <td>کف اتاق</td>
+                                </tr>
+                                <tr>
+                                    <td>[cylinder_block_Level4]</td>
+                                    <td colspan="2"></td>
+                                    <td>[cylinder_block_Level1]</td>
+                                    <td>بلوکه سیلندر</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[room_change_Level1]خیر</td>
+                                    <td>[room_change_Level4]بله</td>
+                                    <td></td>
+                                    <td>تعویض اتاق</td>
+                                </tr>
+                            </tbody>
+                        </table>        
+                    </div>
+                </div>
+            </div>                    
+    </body>
+</html>

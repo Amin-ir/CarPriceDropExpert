@@ -7,17 +7,27 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\calculator_icon.png" />
+    <None Remove="Resources\cleaning.png" />
     <None Remove="Resources\Data\AgeCoefficientConfiguration.json" />
     <None Remove="Resources\Data\DamageCoefficientConfiguration.json" />
     <None Remove="Resources\Data\PriceDropConstraintConfiguration.json" />
     <None Remove="Resources\pdf.png" />
+    <None Remove="Resources\PdfTemplates\TejaratTemplate.html" />
     <None Remove="Resources\Tejarat-No-Insurance-Company-Logo.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Resources\calculator_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cleaning.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Data\DamageCoefficientConfiguration.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -28,6 +38,9 @@
 
   <ItemGroup>
     <Content Include="Resources\pdf.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PdfTemplates\TejaratTemplate.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -42,6 +55,13 @@
     <Content Include="Resources\Data\AgeCoefficientConfiguration.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.2.0" />
+    <PackageReference Include="FreeSpire.Doc" Version="12.2.0" />
+    <PackageReference Include="Select.HtmlToPdf.NetCore" Version="24.1.0" />
+    <PackageReference Include="Select.Pdf" Version="24.1.0" />
   </ItemGroup>
 
   <ItemGroup>

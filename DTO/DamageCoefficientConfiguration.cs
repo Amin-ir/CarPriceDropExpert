@@ -15,9 +15,10 @@ public class DamageItemConfig
 	{
 		switch (level)
 		{
-			case 1: return Level_1;
-			case 2: return Level_2;
-			case 3: return Level_3;
+			case 1: return 0; // 1 = فاقد خسارت
+			case 2: return Level_1;
+			case 3: return Level_2;
+			case 4: return Level_3;
 			default: throw new ArgumentException("invalid level");
 		}
 	}
